@@ -5,8 +5,9 @@ import { Button } from "../components/Button/Button";
 import { Ptag } from "../components";
 import { Tag } from "../components";
 import { Rating } from "../components";
+import { withLayout } from "../Layout";
 
-export default function Home(): JSX.Element {
+function Home(): JSX.Element {
 
   const [rating, setRating] = useState<number>(4);
 
@@ -32,3 +33,5 @@ export default function Home(): JSX.Element {
     </div>
   );
 }
+
+export default withLayout(Home);
