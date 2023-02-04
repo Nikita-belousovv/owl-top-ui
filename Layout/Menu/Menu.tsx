@@ -5,42 +5,10 @@ import { useRouter } from "next/router";
 
 import { MainComponentCxt } from '../../context/app.xontext';
 import { FirstLevelMenuItem, MenuItem, PageItem } from "../../interfaces/menu.interface";
-import { TopLevelCategory } from "../../interfaces/page.interface";
-
-import LessonIcon from './Icons/lesson.svg';
-import BookIcon   from './Icons/book.svg';
-import CloudIcon  from './Icons/cloud.svg';
-import BoxIcon    from './Icons/box.svg';
+import { firstLevelMenu } from "../../helpers";
 
 import styles from './menu.module.css';
 import cn from 'classnames';
-
-const firstLevelMenu: FirstLevelMenuItem[] = [
-	{
-		route: 'courses',
-		name: 'Курсы',
-		icon: <LessonIcon />,
-		id: TopLevelCategory.Courses
-	},
-	{
-		route: 'services',
-		name: 'Сервисы',
-		icon: <CloudIcon />,
-		id: TopLevelCategory.Services
-	},
-	{
-		route: 'books',
-		name: 'Книги',
-		icon: <BookIcon />,
-		id: TopLevelCategory.Books
-	},
-	{
-		route: 'Products',
-		name: 'Товары',
-		icon: <BoxIcon />,
-		id: TopLevelCategory.Products
-	}
-];
 
 export const Menu = (): JSX.Element => {
 
