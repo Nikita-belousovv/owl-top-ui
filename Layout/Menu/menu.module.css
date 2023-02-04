@@ -13,7 +13,6 @@
 }
 
 .FLActive,
-.secLevBlockOpened,
 .firstLevel:hover,
 .firstLevel:hover svg {
 	color: var(--primary);
@@ -59,6 +58,14 @@
 	padding-left: 32px;
 
 	border-left: 1px solid #DFDFDF;
+}
+
+.secLevBlock {
+	display: none;
+}
+
+.secLevBlockOpened {
+	display: block;
 }
 
 .secLevBlockOpened:last-child {
