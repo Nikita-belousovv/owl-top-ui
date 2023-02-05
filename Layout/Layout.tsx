@@ -9,7 +9,6 @@ import {
 	IAppContext
 } from "../context/app.xontext";
 
-import classNames from "classnames";
 import styles from './Layout.module.css';
 
 const Layout = ({ children }: LayoutProps): JSX.Element => {
