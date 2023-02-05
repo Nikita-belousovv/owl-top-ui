@@ -1,0 +1,10 @@
+.thirdLevel {
+	display: block;
+
+	margin: 6px 0;
+}
+
+.thirdLevel:hover,
+.activeThLevel {
+	color: var(--primary);
+}

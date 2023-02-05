@@ -1,0 +1,24 @@
+.firstLevel {
+	display: grid;
+	align-items: center;
+
+	margin-top: 20px;
+
+	font-size: 18px;
+
+	font-weight: 500;
+	line-height: 25px;
+	grid-template-columns: 24px 1fr;
+	gap: 20px;
+}
+
+.FLActive,
+.firstLevel:hover,
+.firstLevel:hover svg {
+	color: var(--primary);
+	fill: var(--primary);
+}
+
+.FLActive svg {
+	fill: var(--primary);
+}
