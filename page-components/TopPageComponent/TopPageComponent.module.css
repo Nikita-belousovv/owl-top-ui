@@ -1,0 +1,22 @@
+.wrapper {
+	margin-top: 37px;
+}
+
+.title {
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+
+	align-items: baseline;
+	justify-items: left;
+	gap: 20px;
+}
+
+.vacancies {
+	display: grid;
+	align-items: baseline;
+
+	text-align: center;
+	justify-items: left;
+	gap: 21px;
+	grid-template-columns: auto 1fr;
+}

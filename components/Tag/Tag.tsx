@@ -8,7 +8,7 @@ export const Tag = ({type, color = 'ghost', href, children, ...props}: TagProps)
 		isEquelGreen   = color === 'green',
 		isEquelSmall   = type  === 'small',
 		isEquelMedium  = type  === 'medium',
-		isEquelGray    = color === 'gray',
+		isEquelGrey    = color === 'grey',
 		isEquelPrimary = color === 'primary',
 		isEquelGhost   = color === 'ghost';
 
@@ -16,7 +16,7 @@ export const Tag = ({type, color = 'ghost', href, children, ...props}: TagProps)
 		<div {...props} className={classNames(styles.tag, {
 			[styles.red]:      isEquelRed,
 			[styles.green]:    isEquelGreen,
-			[styles.gray]:     isEquelGray,
+			[styles.grey]:     isEquelGrey,
 			[styles.small]:    isEquelSmall,
 			[styles.medium]:   isEquelMedium,
 			[styles.ghost]:    isEquelGhost,

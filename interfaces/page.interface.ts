@@ -11,6 +11,14 @@ export interface TopPageAdvantage {
 	description: string;
 }
 
+export interface ItemCategoryCard {
+    id: number;
+    title: string;
+    salary: number;
+    count: number | undefined;
+    icon: JSX.Element;
+}
+
 export interface HhData {
 	_id: string;
 	count: number;
