@@ -34,3 +34,11 @@ export const firstLevelMenu: FirstLevelMenuItem[] = [
 		id: TopLevelCategory.Products
 	}
 ];
+
+export const priceRu = (price: number): { money: string } => {
+	const conversionPrice = price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ').concat(' ₽');
+
+	return {
+		money: conversionPrice
+	};
+};

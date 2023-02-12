@@ -33,7 +33,7 @@
 
 .grey {
 	color: var(--white);
-	background: #51648C;
+	background: var(--grey);
 
 	font-weight: bold;
 }
