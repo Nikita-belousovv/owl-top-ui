@@ -1,14 +1,14 @@
 .wrapper {
 	display: grid;
 
-	gap: 0 30px;
+	gap: 40px 30px;
 
 	min-height: 100vh;
 	grid-template-columns: auto 230px minmax(320px, 1200px) auto;
 	grid-template-rows: auto 1fr auto;
 	grid-template-areas:
 		". header header ."
-		". sidebar body ."
+		". sidebar childrenBody ."
 		"footer footer footer footer";
 }
 
@@ -26,17 +26,21 @@
 	grid-area: footer;
 }
 
-.body {
-	grid-area: body;
+.childrenBody {
+	grid-area: childrenBody;
 }
 
 @media (max-width: 765px) {
+	.childrenBody {
+		padding: 15px;
+	}
+
 	.wrapper {
 		grid-template-columns: minmax(320px, 1fr);
 
 		grid-template-areas:
 			"header"
-			"body"
+			"childrenBody"
 			"footer";
 	}
 

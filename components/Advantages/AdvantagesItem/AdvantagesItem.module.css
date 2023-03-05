@@ -1,0 +1,30 @@
+.advantageWrap {
+	margin-top: 27px;
+}
+
+.titleWrap {
+	display: grid;
+	grid-template-columns: 72px auto;
+
+	align-items: center;
+}
+
+.description {
+	position: relative;
+
+	margin-top: 11px;
+	margin-left: 73px;
+}
+
+.description::after {
+	position: absolute;
+	top: 5px;
+	left: -49px;
+
+	width: 1px;
+	height: 100%;
+
+	content: "";
+
+	background-color: var(--gray-light-two);
+}
