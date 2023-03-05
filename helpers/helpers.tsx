@@ -35,8 +35,8 @@ export const firstLevelMenu: FirstLevelMenuItem[] = [
 	}
 ];
 
-export const priceRu = (price: number): { money: string } => {
-	const conversionPrice = price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ').concat(' ₽');
+export const priceRu = (price?: number): { money?: string } => {
+	const conversionPrice = price?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ').concat(' ₽');
 
 	return {
 		money: conversionPrice

@@ -14,7 +14,7 @@ export interface TopPageAdvantage {
 export interface ItemCategoryCard {
     id: number;
     title: string;
-    salary: number;
+    salary?: number;
     count: number | undefined;
     icon: JSX.Element;
 }
