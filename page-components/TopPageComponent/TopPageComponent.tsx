@@ -5,7 +5,8 @@ import {
     Tag,
     HhData,
     Advantages,
-    Sort
+    Sort,
+    Product
 } from "../../components";
 import { sortEnum } from "../../components/Sort/Sort.props";
 import { ITopPageProps } from "./TopPageComponent.props";
@@ -35,7 +36,7 @@ export const TopPageComponent = ({page, products, firstCategory}: ITopPageProps)
             </div>
             <div>
                 {sortedProducts && sortedProducts.map((productItem) => {
-                    return <div key={productItem._id}>{productItem.title}</div>;
+                    return <Product key={productItem._id} product={productItem} />;
                 })}
             </div>
             <div className={styles.vacancies}> 
