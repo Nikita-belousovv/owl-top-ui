@@ -10,7 +10,7 @@ interface ICompetenciesSalaries {
 }
 
 export const CompetenciesSalaries = ({ itemCategory }: ICompetenciesSalaries): JSX.Element => {
-    const { money } = priceRu(itemCategory.salary);
+    const money = priceRu(itemCategory.salary);
 
     return (
         <div className={styles.salaryItem} key={itemCategory.id}>

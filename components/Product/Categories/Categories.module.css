@@ -1,0 +1,7 @@
+.tags {
+	grid-column: titlestart / middle;
+}
+
+.category {
+	margin-top: 7px;
+}

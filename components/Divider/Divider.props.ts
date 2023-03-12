@@ -1,0 +1,1 @@
+export interface PDivider extends React.ComponentProps<'hr'> {}

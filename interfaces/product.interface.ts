@@ -12,6 +12,11 @@ export interface ReviewModel {
 	createdAt: Date;
 }
 
+export interface ICharacteristicCourse {
+	name: string;
+	value: string;
+}
+
 export interface ProductModel {
 	_id: string;
 	categories: string[];

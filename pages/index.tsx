@@ -2,8 +2,8 @@ import React, { useState } from "react";
 
 import { Htag }   from "../components/Htag/Htag";
 import { Button } from "../components/Button/Button";
-import { Ptag } from "../components";
-import { Tag } from "../components";
+import { Ptag, TxtArea } from "../components";
+import { Tag, Input } from "../components";
 import { Rating } from "../components";
 import { withLayout } from "../Layout";
 import { GetStaticProps } from "next";
@@ -33,6 +33,8 @@ function Home({ menu }: HomeProps): JSX.Element {
         hh.ru
       </Tag>
       <Rating isEdit rating={rating} setRating={setRating} />
+      <Input placeholder="test" />
+      <TxtArea placeholder="text" />
     </div>
   );
 }

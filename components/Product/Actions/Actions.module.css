@@ -1,0 +1,7 @@
+.actions {
+	grid-column: start / end;
+}
+
+.actions > button:last-child {
+	margin-left: 20px;
+}

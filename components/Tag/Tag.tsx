@@ -3,7 +3,7 @@ import { TagProps } from "./Tag.props";
 import classNames from "classnames";
 import styles from './Tag.module.css';
 
-export const Tag = ({type, color = 'ghost', href, children, ...props}: TagProps): JSX.Element => {
+export const Tag = ({type, color = 'ghost', href, children, className, ...props}: TagProps): JSX.Element => {
 	const isEquelRed   = color === 'red',
 		isEquelGreen   = color === 'green',
 		isEquelSmall   = type  === 'small',
@@ -13,7 +13,7 @@ export const Tag = ({type, color = 'ghost', href, children, ...props}: TagProps)
 		isEquelGhost   = color === 'ghost';
 
 	return (
-		<div {...props} className={classNames(styles.tag, {
+		<div {...props} className={classNames(className, styles.tag, {
 			[styles.red]:      isEquelRed,
 			[styles.green]:    isEquelGreen,
 			[styles.grey]:     isEquelGrey,
