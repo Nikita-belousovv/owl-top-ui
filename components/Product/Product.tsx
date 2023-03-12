@@ -3,11 +3,12 @@ import { ProductProps } from "./Product.props";
 import { Card } from "../Card/Card";
 import { Rating } from "../Rating/Rating";
 import { Tag } from "../Tag/Tag";
-import { priceRu } from "../../helpers";
+import { priceRu, declOfNum } from "../../helpers";
 import { Divider } from "../Divider/Divider";
 import { AdvantagesDisAdvantages } from "./AdvantagesDisAdvantages/AdvantagesDisAdvantages";
 import { Actions } from "./Actions/Actions";
 import { Categories } from "./Categories/Categories";
+import { Characteristic } from "./Characteristic/Characteristic";
 
 import cn from "classnames";
 import styles from './Product.module.css';
@@ -16,6 +17,7 @@ export const Product = ({ product, className, ...props}: ProductProps): JSX.Elem
 	const currentPrice  = priceRu(product.price);
 	const currentCredit = priceRu(product.credit);
 	const oldPrice      = priceRu(product.price - product.oldPrice);
+	const slantedText   = declOfNum(product.reviewCount, ['отзыв', 'отзыва', 'отзывов']);
 	
 	return (
 		<Card className={cn(styles.productWrap, className)} {...props}>
@@ -34,10 +36,10 @@ export const Product = ({ product, className, ...props}: ProductProps): JSX.Elem
 			<Categories categories={product.categories}/>
 			<div className={styles.priceTitle}>Цена</div>
 			<div className={styles.creditTitle}>Кредит</div>
-			<div className={styles.rateTitle}>{product.reviewCount} отзывов</div>
+			<div className={styles.rateTitle}>{product.reviewCount} {slantedText}</div>
 			<Divider className={styles.hr} />
 			<div className={styles.description}>{product.description}</div>
-			<div className={styles.feature}>фичи</div>
+			<Characteristic characteristic={product.characteristics} />
 			<AdvantagesDisAdvantages currentProduct={product}/>
 			<Divider className={styles.hr} />
 			<Actions />

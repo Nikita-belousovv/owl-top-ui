@@ -49,10 +49,6 @@
 	grid-column: start / end;
 }
 
-.feature {
-	grid-column: start / middle;
-}
-
 .title {
 	align-self: flex-end;
 
