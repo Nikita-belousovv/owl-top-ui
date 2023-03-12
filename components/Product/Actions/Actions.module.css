@@ -5,3 +5,23 @@
 .actions > button:last-child {
 	margin-left: 20px;
 }
+
+@media screen and (max-width: 1320px) {
+	.actions {
+		grid-area: actions;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.actions > button {
+		display: block;
+	}
+
+	.actions > button:last-child {
+		margin-left: 0;
+	}
+
+	.actions > button:last-child {
+		margin-top: 20px;
+	}
+}
